@@ -17,4 +17,6 @@ arrival = media.Movie("The Arrival", "A translator must quickly learn an alien l
 
 movies = [toy_story, avatar, force_awakens, aliens, princess_bride, arrival]
 
-fresh_tomatoes.open_movies_page(movies)
+#fresh_tomatoes.open_movies_page(movies)
+#print(media.Movie.VALID_RATINGS)
+print(media.Movie.__doc__)
