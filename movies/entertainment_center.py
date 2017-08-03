@@ -19,4 +19,8 @@ movies = [toy_story, avatar, force_awakens, aliens, princess_bride, arrival]
 
 #fresh_tomatoes.open_movies_page(movies)
 #print(media.Movie.VALID_RATINGS)
-print(media.Movie.__doc__)
+#print(media.Movie.__doc__)
+print(media.Movie.__name__)
+print(media.Movie.__module__)
+print(aliens.__module__)
+
