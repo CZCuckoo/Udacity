@@ -1,26 +1,49 @@
+#!/usr/bin/env python
+
+"""This file is the main file to be run for our fresh tomatoes site.
+It brings in the class Movie from media.py, and runs fresh_tomatoes.py
+to get the html necessary to run the project. It creates instances of
+the class Movie"""
+
 import media
 import fresh_tomatoes
 
-toy_story = media.Movie("Toy Story", "A story of a boy and his toys that come to life", "http://upload.wikimedia.org/wikipedia/en/1/13/Toy_Story.jpg", "https://www.youtube.com/watch?v=vwyZH85NQC4")
+fury_road = media.Movie("Mad Max: Fury Road",
+                        "In a post apocalyptic world, two people struggle to "
+                        "escape a warlord",
+                        "https://upload.wikimedia.org/wikipedia/en/6/6e/Mad_Max_Fury_Road.jpg",  # NOQA
+                        "https://youtu.be/hEJnMQG9ev8")
 
-avatar = media.Movie("Avatar", "A marine on an alien planet", "https://upload.wikimedia.org/wikipedia/en/b/b0/Avatar-Teaser-Poster.jpg", "https://youtu.be/d1_JBMrrYw8")
+blade_runner = media.Movie("Blade Runner",
+                           "A bounty hunter seeks out robotic 'replicants' "
+                           "learns more about his prey, and questions his job.",
+                           "https://upload.wikimedia.org/wikipedia/en/5/53/Blade_Runner_poster.jpg",  # NOQA
+                           "https://youtu.be/eogpIG53Cis")
 
-force_awakens = media.Movie("Star Wars: The Force Awakens", "A young woman discovers she is strong in the force.", "https://upload.wikimedia.org/wikipedia/en/a/a2/Star_Wars_The_Force_Awakens_Theatrical_Poster.jpg", "https://youtu.be/sGbxmsDFVnE")
+force_awakens = media.Movie("Star Wars: The Force Awakens",
+                            "A young woman discovers she is strong in the force.",
+                            "https://upload.wikimedia.org/wikipedia/en/a/a2/Star_Wars_The_Force_Awakens_Theatrical_Poster.jpg",  # NOQA
+                            "https://youtu.be/sGbxmsDFVnE")
 
-aliens = media.Movie("Aliens", "A team of marines discover investigate a planet and get more than they anticipated", "https://upload.wikimedia.org/wikipedia/en/f/fb/Aliens_poster.jpg", "https://youtu.be/W857ys3BlRI")
+aliens = media.Movie("Aliens",
+                     "A team of marines discover investigate a planet and get "
+                     "more than they anticipated",
+                     "https://upload.wikimedia.org/wikipedia/en/f/fb/Aliens_poster.jpg",  # NOQA
+                     "https://youtu.be/W857ys3BlRI")
 
-princess_bride = media.Movie("The Princess Bride", "A young child, home from school, bonds with his grandfather as he is read a story", "https://upload.wikimedia.org/wikipedia/en/d/db/Princess_bride.jpg", "https://youtu.be/VYgcrny2hRs")
+princess_bride = media.Movie("The Princess Bride",
+                             "A young child, home from school, bonds with his "
+                             "grandfather as he is read a story",
+                             "https://upload.wikimedia.org/wikipedia/en/d/db/Princess_bride.jpg",  # NOQA
+                             "https://youtu.be/VYgcrny2hRs")
 
-arrival = media.Movie("The Arrival", "A translator must quickly learn an alien language to stop violence.", "https://upload.wikimedia.org/wikipedia/en/d/df/Arrival%2C_Movie_Poster.jpg", "https://youtu.be/tFMo3UJ4B4g")
+arrival = media.Movie("The Arrival",
+                      "A translator must quickly learn an alien language to "
+                      "stop violence.",
+                      "https://upload.wikimedia.org/wikipedia/en/d/df/Arrival%2C_Movie_Poster.jpg",  # NOQA
+                      "https://youtu.be/tFMo3UJ4B4g")
 
+movies = [fury_road, blade_runner, force_awakens, aliens, princess_bride,
+          arrival]
 
-
-movies = [toy_story, avatar, force_awakens, aliens, princess_bride, arrival]
-
-#fresh_tomatoes.open_movies_page(movies)
-#print(media.Movie.VALID_RATINGS)
-#print(media.Movie.__doc__)
-print(media.Movie.__name__)
-print(media.Movie.__module__)
-print(aliens.__module__)
-
+fresh_tomatoes.open_movies_page(movies)
