@@ -3,10 +3,13 @@
 """This file is the main file to be run for our fresh tomatoes site.
 It brings in the class Movie from media.py, and runs fresh_tomatoes.py
 to get the html necessary to run the project. It creates instances of
-the class Movie"""
+the class Movie, and an array used as an argument in fresh_tomatoes"""
 
 import media
 import fresh_tomatoes
+
+# This is a series of instances of the class Movie, taking the name, summary,
+# movie poster, and trailer link as arguments.
 
 fury_road = media.Movie("Mad Max: Fury Road",
                         "In a post apocalyptic world, two people struggle to "
@@ -45,5 +48,9 @@ arrival = media.Movie("The Arrival",
 
 movies = [fury_road, blade_runner, force_awakens, aliens, princess_bride,
           arrival]
+
+# the array movies includes all of the instances of Movie class, which are
+# called within fresh_tomatoes.py as arguments in create_movie_titles_content
+# and open_movies_page 
 
 fresh_tomatoes.open_movies_page(movies)

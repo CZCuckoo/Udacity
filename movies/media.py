@@ -8,7 +8,8 @@ class Movie():
     VALID_RATINGS = ["G", "PG", "PG-13", "R"]
 
     
-    def __init__(self, movie_title, movie_storyline, poster_image, trailer_youtube):
+    def __init__(self, movie_title, movie_storyline, poster_image,
+                 trailer_youtube):
         # constructor to add an instance of a movie
         self.title = movie_title
         self.storyline = movie_storyline
